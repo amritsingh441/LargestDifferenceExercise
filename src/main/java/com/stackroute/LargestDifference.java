@@ -1,6 +1,5 @@
 package com.stackroute;
 
-import java.util.Arrays;
 import java.util.Scanner;
 
 public class LargestDifference {
@@ -9,10 +8,10 @@ public class LargestDifference {
     public static void main(String[] args) {
    	//Use Scanner to get input from console
     	Scanner sc = new Scanner(System.in);
-    	int total = sc.nextInt();
+    	int total = Integer.parseInt(sc.next());
     	int [] numArray = new int[total];
     	for (int i = 0; i < total; i++) {
-    		numArray[i] = sc.nextInt();
+    		numArray[i] = Integer.parseInt(sc.next());
 		}
     	
     	int index = findLargestDifference(numArray);
@@ -39,10 +38,9 @@ public class LargestDifference {
 						if(numbers[resIndex] < numbers[i]) {
 							resIndex = i;
 						}
-						
 					}else {
 						
-						if(numbers[resIndex] < numbers[i]) {
+						if(numbers[resIndex] < numbers[i+1]) {
 							resIndex = i+1;
 						}
 					}
